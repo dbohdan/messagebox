@@ -5,16 +5,16 @@ command line programs. There are many like it but I didn't find any that was
 open source, non-copyleft and had no external dependencies like the .NET
 Framework.
 
-## Binaries
+## Binary downloads
 
-Available from the [Releases](https://github.com/dbohdan/messagebox/releases)
-page on GitHub.
+Are available from the
+[Releases](https://github.com/dbohdan/messagebox/releases) page on GitHub.
 
 ## Use example
 
 ```batch
 @echo off
-chcp 65001
+chcp 65001 > nul
 set MB_YESNO=4
 set MB_ICONQUESTION=32
 set MB_ICONINFORMATION=64
@@ -23,6 +23,8 @@ set /a type=%MB_YESNO% + %MB_ICONQUESTION%
 messagebox "Do you want to play a game?" "Helpful Computer" %type%
 if "%ERRORLEVEL%"=="%IDYES%" messagebox "What a cliché answer!" "Helpful Computer" %MB_ICONINFORMATION%
 ```
+
+See [demo.cmd](./demo.cmd) for more.
 
 ## Build requirements
 
