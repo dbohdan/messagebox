@@ -19,11 +19,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
         return 255;
     }
     if (argCount < 3 || argCount > 4) {
-        fprintf(stderr, "MessageBox v" VERSION "\n", szArgList[0]);
+        fprintf(stderr, "Batch MessageBox v" VERSION "\n", szArgList[0]);
         fprintf(stderr, "Usage: %ls message title [type]\n\n", szArgList[0]);
 
-        fprintf(stderr, "See\n" URL "\nfor the possible values of \"type\". "
-                        "ERRORLEVEL is the return value.\n");
+        fprintf(stderr, "Calls MessageBoxW() with the given arguments. See\n"
+                        URL "\nfor the possible values of \"type\". "
+                        "ERRORLEVEL is the return value or 255 on\nerror.\n");
         return 255;
     }
     int type = _wtoi(szArgList[3]);

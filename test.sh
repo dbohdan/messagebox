@@ -1,6 +1,6 @@
 #! /bin/sh
 # Test 01
-./messagebox.exe 2>&1 | grep MessageBox
+./messagebox.exe 2>&1 | grep 'MessageBox v'
 
 # Test 02
 (sleep 0.2; sendkey.exe enter) &
