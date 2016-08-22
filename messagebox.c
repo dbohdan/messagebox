@@ -8,7 +8,7 @@
 #define VERSION "0.1.0"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
-                   int nShowCmd)
+                   int nCmdShow)
 {
     LPWSTR *szArgList;
     int argCount;
