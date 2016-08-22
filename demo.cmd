@@ -29,26 +29,27 @@ rem Other options.
 set MB_SETFOREGROUND=65536
 
 rem Result ERRORLEVELs.
-
-set IDABORT=3
-set IDCANCEL=2
-set IDCONTINUE=11
-set IDIGNORE=5
-set IDNO=7
 set IDOK=1
+set IDCANCEL=2
 set IDRETRY=4
-set IDTRYAGAIN=10
+set IDABORT=3
+set IDIGNORE=5
 set IDYES=6
+set IDNO=7
+set IDTRYAGAIN=10
+set IDCONTINUE=11
 
 rem ----------------------------------------------------------------------------
 
-set /a type=%MB_YESNO% + %MB_ICONQUESTION% + %MB_DEFBUTTON2%
-messagebox "Enough message boxes?" "A serious question" %type%
-if "%ERRORLEVEL%"=="%IDNO%" goto no
-:yes
-echo No more message boxes for you, then.
-goto end
-:no
-set /a type=%MB_OK% + %MB_ICONINFORMATION%
-messagebox "Okay, here's another one!" "MessageBox the Second" %type%
-:end
+setlocal ENABLEDELAYEDEXPANSION
+
+set /a type=!MB_YESNO! + !MB_ICONQUESTION! + !MB_DEFBUTTON2!
+messagebox "Enough message boxes?" "A serious question" !type!
+rem The following is less error-prone than 'if errorlevel "!IDNO!"'.
+if "!ERRORLEVEL!"=="!IDYES!" (
+    echo No more message boxes for you, then.
+    pause > nul
+) else (
+    set /a type=!MB_OK! + !MB_ICONINFORMATION!
+    messagebox "Okay, here's another one^!" "MessageBox the Second" !type!
+)
