@@ -10,6 +10,20 @@ Framework.
 Available from the [Releases](https://github.com/dbohdan/messagebox/releases)
 page on GitHub.
 
+## Use example
+
+```batch
+@echo off
+chcp 65001
+set MB_YESNO=4
+set MB_ICONQUESTION=32
+set MB_ICONINFORMATION=64
+set IDYES=6
+set /a type=%MB_YESNO% + %MB_ICONQUESTION%
+messagebox "Do you want to play a game?" "Helpful Computer" %type%
+if "%ERRORLEVEL%"=="%IDYES%" messagebox "What a cliché answer!" "Helpful Computer" %MB_ICONINFORMATION%
+```
+
 ## Build requirements
 
 * [MinGW](http://www.mingw.org/) (mingw32-base and msys-base version
