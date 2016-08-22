@@ -19,7 +19,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
         return 255;
     }
     if (argCount < 3 || argCount > 4) {
-        fprintf(stderr, "Batch MessageBox v" VERSION "\n", szArgList[0]);
+        fprintf(stderr, "Batch MessageBox v" VERSION "\n");
         fprintf(stderr, "Usage: %ls message title [type]\n\n", szArgList[0]);
 
         fprintf(stderr, "Calls MessageBoxW() with the given arguments. See\n"
@@ -27,6 +27,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
                         "ERRORLEVEL is the return value or 255 on\nerror.\n");
         return 255;
     }
+    /* Ignore _wtoi errors. */
     int type = _wtoi(szArgList[3]);
     int button = MessageBoxW(NULL, szArgList[1], szArgList[2], type);
     LocalFree(szArgList);
