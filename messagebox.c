@@ -1,3 +1,5 @@
+#undef __STRICT_ANSI__
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
