@@ -1,5 +1,7 @@
 # Batch MessageBox
 
+[![AppVeyor CI build status](https://ci.appveyor.com/api/projects/status/github/dbohdan/messagebox?branch=master&svg=true)](https://ci.appveyor.com/project/dbohdan/messagebox)
+
 This is a tiny hack to display message boxes from Windows batch files and
 command line programs. There are many like it but I didn't find any that was
 open source, non-copyleft and had no external dependencies like the .NET
