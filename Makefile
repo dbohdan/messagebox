@@ -4,6 +4,4 @@ resources.o: resources.rc
 	windres $< -o $@
 clean:
 	rm messagebox.exe *.o
-test: messagebox.exe
-	./test.sh
-.PHONY: clean test
+.PHONY: clean
