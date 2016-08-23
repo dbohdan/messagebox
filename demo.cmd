@@ -41,13 +41,14 @@ set IDCONTINUE=11
 
 rem ----------------------------------------------------------------------------
 
+rem See http://ss64.com/nt/delayedexpansion.html
 setlocal ENABLEDELAYEDEXPANSION
 
 set /a type=!MB_YESNO! + !MB_ICONQUESTION! + !MB_DEFBUTTON2!
 messagebox "Enough message boxes?" "A serious question" !type!
-rem The following is less error-prone than 'if errorlevel "!IDNO!"'.
+rem The following is less error-prone than 'if errorlevel "!IDYES!"'.
 if "!ERRORLEVEL!"=="!IDYES!" (
-    echo No more message boxes for you, then.
+    echo No message boxes for you, then.
     pause > nul
 ) else (
     set /a type=!MB_OK! + !MB_ICONINFORMATION!
