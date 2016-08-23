@@ -2,6 +2,7 @@ version: "0.1.0.{build}"
 install:
   - cmd: choco install mingw
   - ps: Invoke-WebRequest http://www.f2ko.de/downloads/cmdtools/sendkey.exe -OutFile sendkey.exe
+  - ps: iex ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-desktop.ps1'))
 build_script:
   - cmd: build.cmd /batch /buildonly
 test_script:
