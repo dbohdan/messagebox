@@ -3,5 +3,5 @@ messagebox.exe: messagebox.c resources.o
 resources.o: resources.rc
 	windres $< -o $@
 clean:
-	rm messagebox.exe *.o
+	rm messagebox.exe *.o || true
 .PHONY: clean
