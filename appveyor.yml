@@ -1,4 +1,4 @@
-version: "0.1.0"
+version: "0.1.0.{build}"
 install:
   - cmd: choco install mingw
   - ps: Invoke-WebRequest http://www.f2ko.de/downloads/cmdtools/sendkey.exe
