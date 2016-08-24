@@ -17,7 +17,7 @@ for %%a in (%*) do (
 )
 
 if "%flag_clean%"=="1" (
-    make clean
+    del messagebox.exe *.o
     if ERRORLEVEL 1 goto error
 )
 if "%flag_build%"=="1" (
