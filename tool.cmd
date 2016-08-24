@@ -56,7 +56,7 @@ if "%flag_build%"=="1" (
     if ERRORLEVEL 1 goto error
 )
 if "%flag_test%"=="1" (
-    sh test.sh %test_args%
+    sh tests.sh %test_args%
     if ERRORLEVEL 1 goto error
 )
 goto exit
