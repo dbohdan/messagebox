@@ -34,15 +34,17 @@ See [demo.cmd](./demo.cmd) for more.
 
 ## Build requirements
 
-* [MinGW](http://www.mingw.org/) (mingw32-base and msys-base version
-2013072200);
+* [MinGW](http://www.mingw.org/). You need to have the packages mingw32-base and
+msys-base version 2013072200 installed in `C:\MinGW`.
 * Optionally, [sendkey](http://www.f2ko.de/en/cmd.php) to run the tests.
-Put `sendkey.exe` in the repository directory or any directory that is in your
-`PATH`. The MD5 hash for `sendkey.exe` should be
-`81a722710cb245b58035bdde1ad737b8`.
+Put `sendkey.exe` in the project directory (a clone of this repository) or any
+directory that is in your `PATH`. To download `sendkey.exe` to the project
+directory automatically, run `Download-SendKey.ps1` with PowerShell 2.0 or
+later. This is better than downloading the file manually because the script will
+verify its checksum.
 
-Once you are done with that run `build.cmd` to build `messagebox.exe` and then
-`test.cmd` to test it.
+Once you are done with the requirements run `build.cmd` to build
+`messagebox.exe` and then `test.cmd` to test it.
 
 ## License
 
