@@ -34,10 +34,11 @@ See [demo.cmd](./demo.cmd) for more.
 
 ## Build requirements
 
-* [MinGW](http://www.mingw.org/) (mingw32-base version 2013072200);
-* Optionally, msys-base 2013072200 and [sendkey](http://www.f2ko.de/en/cmd.php)
-to run the tests. Put `sendkey.exe` in the repository directory or any directory
-that is in your `PATH`.
+* [MinGW](http://www.mingw.org/) (mingw32-base and msys-base version
+2013072200);
+* Optionally,  [sendkey](http://www.f2ko.de/en/cmd.php) to run the tests.
+Put `sendkey.exe` in the repository directory or any directory that is in your
+`PATH`.
 
 Once you are done with that run `build.cmd` to build `messagebox.exe` and then
 `test.cmd` to test it.
