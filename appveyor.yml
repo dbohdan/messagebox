@@ -1,6 +1,4 @@
 version: "0.1.0.{build}"
-install:
-  - cmd: choco install mingw
 build_script:
   - cmd: build.cmd /batch
 test_script:
