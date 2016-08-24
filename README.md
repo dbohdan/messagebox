@@ -7,13 +7,13 @@ command line programs. There are many like it but I didn't find any that was
 open source, non-copyleft and had no external dependencies like the .NET
 Framework.
 
-Another goal of this project is to create a framework that makes building and
-running the tests for a simple Windows program with MinGW surprisingly easy and
-pleasant.
+Another goal of this project is to create a framework that makes building
+a simple Windows program with MinGW and running the tests for it surprisingly
+easy and pleasant.
 
 ## Binary downloads
 
-You can download a prebuilt .exe file on the
+You can download a prebuilt .exe file from the
 [Releases](https://github.com/dbohdan/messagebox/releases) page on GitHub.
 
 ## Use example
@@ -36,9 +36,10 @@ See [demo.cmd](./demo.cmd) for more.
 
 * [MinGW](http://www.mingw.org/) (mingw32-base and msys-base version
 2013072200);
-* Optionally,  [sendkey](http://www.f2ko.de/en/cmd.php) to run the tests.
+* Optionally, [sendkey](http://www.f2ko.de/en/cmd.php) to run the tests.
 Put `sendkey.exe` in the repository directory or any directory that is in your
-`PATH`.
+`PATH`. The MD5 hash for `sendkey.exe` should be
+`81a722710cb245b58035bdde1ad737b8`.
 
 Once you are done with that run `build.cmd` to build `messagebox.exe` and then
 `test.cmd` to test it.
