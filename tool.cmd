@@ -33,18 +33,16 @@ if "%flag_build%"=="1" (
     set path=!mingw_path!;!path!
 )
 
-if "%flag_test%"=="1" (
-    if "%msys_path%"=="" (
-        if exist C:\MinGW\msys\1.0\bin (
-            set msys_path=C:\MinGW\msys\1.0\bin
-        ) else (
-            echo Error: can't find an MSYS installation.
-            echo You can set the path manually in %0.
-            goto error
-        )
+if "%msys_path%"=="" (
+    if exist C:\MinGW\msys\1.0\bin (
+        set msys_path=C:\MinGW\msys\1.0\bin
+    ) else (
+        echo Error: can't find an MSYS installation.
+        echo You can set the path manually in %0.
+        goto error
     )
-    set path=!msys_path!;!path!
 )
+set path=%msys_path%;%path%
 
 rem Perform the requested actions.
 if "%flag_clean%"=="1" (
