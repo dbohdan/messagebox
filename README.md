@@ -44,7 +44,7 @@ pacman --sync --noconfirm git make mingw-w64-i686-gcc wget
 git clone http://github.com/dbohdan/messagebox
 cd messagebox
 make
-wget http://www.f2ko.de/downloads/cmdtools/sendkey.exe
+make sendkey.exe # Download and verify the checksum for sendkey.exe.
 make test
 ```
 
