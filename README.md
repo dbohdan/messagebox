@@ -5,6 +5,12 @@ command line programs. There are many like it but I didn't find any that was
 open source, non-copyleft and had no external dependencies like the .NET
 Framework.
 
+<s>Another goal of this project is to create a framework that makes building
+a simple Windows program with MinGW and running the tests for it surprisingly
+easy and pleasant.</s> Never mind that; use MSYS2. (The old build scripts are
+preserved in the branch
+[mingw](https://github.com/dbohdan/messagebox/tree/mingw).)
+
 ## Binary downloads
 
 Are available from the
@@ -28,12 +34,19 @@ See [demo.cmd](./demo.cmd) for more.
 
 ## Build requirements
 
-* [MinGW](http://www.mingw.org/) (mingw32-base and msys-base version
-2013072200);
-* Optionally, [sendkey](http://www.f2ko.de/en/cmd.php) in `PATH` to run the
-tests.
+* [MSYS2](https://msys2.github.io/).
+* Optionally, [sendkey](http://www.f2ko.de/en/cmd.php) to run the tests.
 
-Once you have those run `build.cmd`.
+Install MSYS2 then in the MSYS2 shell run
+
+```sh
+pacman --sync --noconfirm git make mingw-w64-i686-gcc wget
+git clone http://github.com/dbohdan/messagebox
+cd messagebox
+make
+wget http://www.f2ko.de/downloads/cmdtools/sendkey.exe
+make test
+```
 
 ## License
 
