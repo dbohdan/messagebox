@@ -1,0 +1,11 @@
+version: "0.1.0.{build}"
+install:
+  - cmd: set MSYSTEM=MINGW32
+  - cmd: C:\msys64\usr\bin\bash -lc "pacman --sync --noconfirm make mingw-w64-i686-gcc wget"
+  - cmd: C:\msys64\usr\bin\bash -lc "cd /c/projects/messagebox; make sendkey.exe"
+build_script:
+  - cmd: C:\msys64\usr\bin\bash -lc "cd /c/projects/messagebox; make"
+test_script:
+  - cmd: C:\msys64\usr\bin\bash -lc "cd /c/projects/messagebox; ./tests.sh --nogui"
+artifacts:
+  - path: messagebox.exe

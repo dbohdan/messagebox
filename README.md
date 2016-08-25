@@ -1,5 +1,7 @@
 # Batch MessageBox
 
+[![AppVeyor CI build status](https://ci.appveyor.com/api/projects/status/github/dbohdan/messagebox?branch=master&svg=true)](https://ci.appveyor.com/project/dbohdan/messagebox)
+
 This is a tiny hack to display message boxes from Windows batch files and
 command line programs. There are many like it but I didn't find any that was
 open source, non-copyleft and had no external dependencies like the .NET
@@ -34,10 +36,12 @@ See [demo.cmd](./demo.cmd) for more.
 
 ## Build requirements
 
-* [MSYS2](https://msys2.github.io/).
+* [MSYS2](https://msys2.github.io/);
 * Optionally, [sendkey](http://www.f2ko.de/en/cmd.php) to run the tests.
 
-Install MSYS2 then in the MSYS2 shell run
+Install MSYS2 then start the 32-bit MinGW shell (e.g.,
+`C:\msys64\mingw32_shell.bat` or `C:\msys64\mingw32.exe`) and run the following
+commands:
 
 ```sh
 pacman --sync --noconfirm git make mingw-w64-i686-gcc wget
