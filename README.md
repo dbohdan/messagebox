@@ -15,7 +15,7 @@ preserved in the branch
 
 ## Binary downloads
 
-Are available from the
+You can download a prebuilt .exe file from the
 [Releases](https://github.com/dbohdan/messagebox/releases) page on GitHub.
 
 ## Use example
@@ -39,16 +39,16 @@ See [demo.cmd](./demo.cmd) for more.
 * [MSYS2](https://msys2.github.io/);
 * Optionally, [sendkey](http://www.f2ko.de/en/cmd.php) to run the tests.
 
-Install MSYS2 then start the 32-bit MinGW shell (e.g.,
-`C:\msys64\mingw32_shell.bat` or `C:\msys64\mingw32.exe`) and run the following
-commands:
+Install MSYS2 then start the 32-bit MinGW shell (with `C:\msys32\mingw32.exe` or
+`C:\msys64\mingw32.exe` in an up-to-date MSYS2 installation) and run
+the following commands:
 
 ```sh
 pacman --sync --noconfirm git make mingw-w64-i686-gcc wget
 git clone http://github.com/dbohdan/messagebox
 cd messagebox
 make
-make sendkey.exe # Download and verify the checksum for sendkey.exe.
+make sendkey.exe # Download sendkey.exe and verify its checksum.
 make test
 ```
 
