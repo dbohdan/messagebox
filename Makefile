@@ -5,5 +5,5 @@ resources.o: resources.rc
 clean:
 	rm messagebox.exe *.o
 test: messagebox.exe
-	./test.sh
+	./tests.sh
 .PHONY: clean test
