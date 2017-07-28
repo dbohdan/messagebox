@@ -91,7 +91,7 @@ test07() {
 
 send_keys_after_delay() {
     sleep 0.2
-    for key in $@; do
+    for key in "$@"; do
         "$sendkey" "$key"
     done
 }
@@ -105,7 +105,7 @@ expect_choice() {
 }
 
 run_tests() {
-    for test in $@; do
+    for test in "$@"; do
         $test
     done
 }
