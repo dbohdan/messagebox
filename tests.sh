@@ -71,21 +71,19 @@ test04() {
 
 test05() {
     send_keys_after_delay tab enter &
-    "$messagebox" foo bar "$(expr "$MB_YESNO" + "$MB_DEFBUTTON2")"
+    "$messagebox" foo bar "$((MB_YESNO + MB_DEFBUTTON2))"
     expect_choice "$IDYES"
 }
 
 test06() {
     send_keys_after_delay left left enter &
-    "$messagebox" foo bar \
-            "$(expr "$MB_ABORTRETRYIGNORE" + "$MB_SETFOREGROUND")"
+    "$messagebox" foo bar $((MB_ABORTRETRYIGNORE + MB_SETFOREGROUND))
     expect_choice "$IDRETRY"
 }
 
 test07() {
     send_keys_after_delay tab tab enter &
-    "$messagebox" foo bar \
-            "$(expr "$MB_ABORTRETRYIGNORE" + "$MB_DEFBUTTON4")"
+    "$messagebox" foo bar $((MB_ABORTRETRYIGNORE + MB_DEFBUTTON4))
     expect_choice "$IDIGNORE"
 }
 
