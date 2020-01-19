@@ -37,7 +37,7 @@ See [demo.cmd](./demo.cmd) for more.
 ## Build requirements
 
 * [MSYS2](https://msys2.github.io/);
-* Optionally, [sendkey](http://www.f2ko.de/en/cmd.php) to run the tests.
+* Optionally, [sendkey](https://web.archive.org/web/20190305143035/http://www.f2ko.de/en/cmd.php) to run the tests.
 
 Install MSYS2 then start the 32-bit MinGW shell (with `C:\msys32\mingw32.exe` or
 `C:\msys64\mingw32.exe` in an up-to-date MSYS2 installation) and run
